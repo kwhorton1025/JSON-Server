@@ -1,26 +1,52 @@
-<<<<<<< HEAD
-[
-    {
-        "name": "Mom",
-        "duration": "1",
-        "id": "1"
-    },
-    {
-        "name": "Dad",
-        "duration": "3",
-        "id": "2"
-    },
-    {
-        "name": "Son",
-        "duration": "2",
-        "id": "3"
-    },
-    {
-        "name": "Daughter",
-        "duration": "4",
-        "id": "4"
-    }
-]
-=======
-
->>>>>>> 4838684afbd91bb87ca9de969c7deb327082dad6
+{
+    "lists": [
+        {
+            "name": "Mom",
+            "task": "",
+            "duration": "1",
+            "id": "1"
+        },
+        {
+            "name": "Dad",
+            "task": "",
+            "duration": "3",
+            "id": "2"
+        },
+        {
+            "name": "Son",
+            "task": "",
+            "duration": "2",
+            "id": "3"
+        },
+        {
+            "name": "Daughter",
+            "task": "",
+            "duration": "4",
+            "id": "4"
+        },
+        {
+            "name": "Aunt",
+            "task": "",
+            "duration": "2",
+            "id": "5"
+        },
+        {
+            "name": "Uncle",
+            "task": "",
+            "duration": "5",
+            "id": "6"
+        },
+        {
+            "name": "Grandma",
+            "task": "",
+            "duration": "1",
+            "id": "7"
+        },
+        {
+            "name": "Grandpa",
+            "task": "",
+            "duration": "2",
+            "id": "8"
+        }
+    ]
+}

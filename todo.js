@@ -1,3 +1,13 @@
+//I'm having trouble with my JQuery and MockAPI running like it should.
+//I keep getting errors with I try to click my buttons and my buttons don't work like they should.
+//I've tried multiple API's, even downloading JSON server.
+//If the buttons worked like they should, you should be able to add a to-do list for every member in your family.
+//From there, you should be able to add tasks and about how long it would take to complete each task to each member's list.
+//You could delete tasks as they are completed and also add new tasks.
+//Lists can also be deleted.
+//Here is the link for my local JSON server API: https://localhost:5500/lists.
+//Created a db.json file for my local server.
+
 class List {
   constructor(name) {
     this.name = name;
@@ -17,7 +27,7 @@ class Task {
 }
 
 class EditLists {
-  static url = "https://my-json-server.typicode.com/kwhorton1025/Week-12-Coding-Assignment";
+  static url = "https://6442dd7b33997d3ef91b58e8.mockapi.io/CRUD-app/task"; //mockAPI link
 
   static getAllLists() {
     return $.get(this.url);
@@ -50,6 +60,8 @@ class EditLists {
     });
   }
 }
+
+//section that makes adding, updating, and deleting lists possible in HTML.
 
 class DOMManager {
   static lists;
@@ -92,6 +104,8 @@ class DOMManager {
     }
   }
 
+  //navigates through the DOM updating/deleting lists and tasks and adding tasks to individual lists. 
+
   static deleteTask(listId, taskId) {
     for (const list of this.lists) {
       if (list._id === listId) {
@@ -107,6 +121,8 @@ class DOMManager {
       }
     }
   }
+
+  //allows you to delete a task in an individual list.
 
   static render(lists) {
     this.lists = lists;
@@ -131,7 +147,7 @@ class DOMManager {
                               <button id="${list._id}-new-task" onclick="DOMManager.addTask('${list._id}')" class="btn btn-secondary form-control">Add New Task</button>
                           </div>
                       </div>
-                  </div><br>`
+                  </div><br>` //text boxes in individual lists for adding tasks and duration.
       );
       for (const task of list.tasks) {
         $(`#${list._id}`)
@@ -141,7 +157,7 @@ class DOMManager {
                            <span id="name-${task._id}"><strong>Task Name: </strong> ${task.name}</span>
                            <span id="duration-${task._id}"><strong>Task Duration: </strong> ${task.duration}</span>
                            <button class="btn btn-danger" onclick="DOMManager.deleteTask('${list._id}', '${task._id}')">Delete Task</button>`
-          );
+          ); //delete task button in individual lists.
       }
     }
   }
@@ -153,3 +169,5 @@ $("#create-new-list").on("click", () => {
 });
 
 DOMManager.getAllLists();
+
+//called to run all code and should make the main add list button work.
