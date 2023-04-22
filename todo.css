@@ -1,0 +1,19 @@
+body {
+    background-color: rgba(151, 135, 146, 0.807);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    color: black;
+}
+
+#new-list {
+    background-color: rgb(224, 222, 222);
+}
+
+.card {
+    background-color: rgb(224, 222, 222);
+}

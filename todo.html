@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do App</title>
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <link rel="stylesheet" href="todo.css" />
+  </head>
+
+  <div
+      class="p-5 text-center bg-image rounded-3"
+      style="
+        background-image: url('https://th.bing.com/th/id/R.cc22d0c19e6e25506a643704ba4c4463?rik=z1FyGdoyyR3MTw&riu=http%3a%2f%2fwww.profilerehab.com%2ffacebook_covers%2fflowers%2fblack_white_flowers_cover_15.jpg&ehk=7Mms0uoGwDOixPxXrLObyQAlX5lOjzreTJ8M7AjSfE4%3d&risl=&pid=ImgRaw&r=0');
+        height: 100%;
+        width: 100%;
+      "
+    >
+      <div class="mask" style="background-color: rgba(0, 0, 0, 0.6)">
+        <div class="d-flex justify-content-center align-items-center h-100">
+          <div class="text-white">
+            <h1 class="mb-3">Family To-Do List</h1>
+            <h4 class="mb-3">Helps Keep Everyone Organized</h4>
+            <!-- hero image at top of page with heading -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <body class="container">
+    <div id="new-list" class="jumbotron">
+      <h2>New List</h2>
+      <input type="text" id="new-list-name" class="form-control" placeholder="Family Member's Name" /> <br />
+      <button id="create-new-list" class="btn btn-secondary form-control" type="button">
+        Add List
+      </button>
+    </div>
+
+    <div id="app"></div>
+
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="todo.js"></script>
+  </body>
+</html>
